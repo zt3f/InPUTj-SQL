@@ -1,6 +1,6 @@
-# SQL Extension of InPUT
+# SQL Extension of InPUTj
 
-The SQL extension of [InPUT](https://github.com/feldob/InPUT) makes it possible to export, import, update and delete experimental descriptors to/from SQL databases. For information about how to get started, see [this tutorial](https://github.com/feldob/InPUT/wiki/SQL-Extension).
+The SQL extension of the Java implementation of [InPUT](https://github.com/feldob/InPUT) makes it possible to export, import, update and delete experimental descriptors to/from SQL databases. For information about how to get started, see [this tutorial](https://github.com/feldob/InPUT/wiki/SQL-Extension).
 
 # License
 
