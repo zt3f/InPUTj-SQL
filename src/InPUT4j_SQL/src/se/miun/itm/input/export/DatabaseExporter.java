@@ -19,7 +19,6 @@ import se.miun.itm.input.model.SQLInPUTException;
 import se.miun.itm.input.model.design.IDesign;
 import se.miun.itm.input.model.design.IDesignSpace;
 import se.miun.itm.input.model.mapping.Framework;
-import se.miun.itm.input.util.Q;
 import se.miun.itm.input.util.sql.AbstractDatabaseConnector;
 import se.miun.itm.input.util.sql.DatabaseAdapter;
 import se.miun.itm.input.util.sql.DatabaseUpdater;
@@ -121,15 +120,12 @@ public class DatabaseExporter extends AbstractDatabaseConnector implements InPUT
 					
 					for (InPUTDocument m : mappings) {
 						Framework fw = Framework.frameworkOf(m);
-						String version = m.getRootElement().
-							getAttributeValue(Q.VERSION_ATTR);
 						
 						xml = conn.createSQLXML();
 						xml.setString(m.toString());
 					
 						insertMappings.setString(1, m.getId());
-						insertMappings.setString(2, version != null ?
-							version : UUID.randomUUID().toString());
+						insertMappings.setString(2, UUID.randomUUID().toString());
 					
 						if (fw == null)
 							insertMappings.setNull(3, Types.VARCHAR);
